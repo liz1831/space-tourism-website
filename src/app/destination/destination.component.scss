@@ -1,0 +1,170 @@
+@import '/src/styles.scss';
+
+.Destination{
+    @include bg-image("/assets/destination/background-destination-desktop.jpg");
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &__image{
+        width:40%;
+    }
+    &__planet{
+        width: 50%;
+        &-menu{
+            padding: 0;
+        }
+        &-info{
+            padding: 0 5px;
+        }
+    }
+}
+
+.planetOption{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    &__item{
+        padding: 10px 25px;
+        border-bottom: 2px solid transparent;
+        &:hover{
+            border-bottom: 2px solid $color-papayawhip;
+            color: $color-hover;
+            cursor: pointer;
+        }
+    }
+}
+
+.PlanetData{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    border-top: 0.6px solid $color-papayawhip;
+    margin-top: 25px;
+    &__item{
+        width: 45%;
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 360px){
+    .Destination{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include bg-image("/assets/destination/background-destination-mobile.jpg");
+        &__image{
+            width:100%;
+            padding: 0;
+                margin: 0;
+            &-planet{
+                max-width: 300px;
+            }
+        }
+        &__planet{
+            width: 100%;
+            &-menu{
+                padding: 0;
+                overflow-x: scroll;
+            }
+            &-info{
+                padding: 0;
+            }
+        }
+    }
+    
+    .planetOption{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        justify-items: center;
+        &__item{
+            padding: 10px;
+            border-bottom: 2px solid transparent;
+            &:hover{
+                border-bottom: 2px solid $color-papayawhip;
+                color: $color-hover;
+                cursor: pointer;
+            }
+        }
+    }
+    
+    .PlanetData{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        justify-items: center;
+        align-items: center;
+        border-top: 0.6px solid $color-papayawhip;
+        margin-top: 25px;
+        &__item{
+            width: 45%;
+            padding: 20px 0;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .Destination{
+        @include bg-image("/assets/destination/background-destination-tablet.jpg");
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &__image{
+            width:100%;
+            &-planet{
+                width: 400px;
+                padding: 20px 0;
+            }
+        }
+        &__planet{
+            width: 100%;
+            &-menu{
+                padding: 0;
+            }
+            &-info{
+                padding: 0;
+            }
+        }
+    }
+    
+    .planetOption{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        justify-items: center;
+        width: 450px;
+        margin: 0 auto;
+        &__item{
+            padding: 10px;
+            border-bottom: 2px solid transparent;
+            &:hover{
+                border-bottom: 2px solid $color-papayawhip;
+                color: $color-hover;
+                cursor: pointer;
+            }
+        }
+    }
+    
+    .PlanetData{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        justify-items: center;
+        align-items: center;
+        border-top: 0.6px solid $color-papayawhip;
+        margin-top: 25px;
+        &__item{
+            width: 45%;
+            padding: 20px 0;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+<div class="Destination content">
+    <div class="Destination__image">
+        <h2 class="subtitle1">
+            <span class="screen">01</span>
+            Pick your destination
+        </h2>
+        <img src={{ArrayDestination[getElement()].images.webp}} alt="" class="Destination__image-planet">
+    </div>
+    <div class="Destination__planet">
+        <div class="Destination__planet-menu">
+            <ul class="planetOption title2" >
+                <li class="planetOption__item" *ngFor="let value of ArrayDestination" (click)="setElement(ArrayDestination.indexOf(value))">{{value.name}}</li>
+            </ul>
+        </div>
+        <div class="Destination__planet-info">
+            <H1 class="title1">{{ArrayDestination[getElement()].name}}</H1>
+            <p class="description">{{ArrayDestination[getElement()].description}}</p>
+            <div class="PlanetData">
+                <div class="PlanetData__item">
+                    <p class="description">AVG. DISTANCE</p>
+                    <h2 class="subtitle2">{{ArrayDestination[getElement()].distance}}</h2>
+                </div>
+                <div class="PlanetData__item">
+                    <p class="description">EST. TRAVEL TIME</p>
+                    <h2 class="subtitle2">{{ArrayDestination[getElement()].travel}}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

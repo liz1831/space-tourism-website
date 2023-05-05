@@ -1,0 +1,205 @@
+@import '../styles.scss';
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1.2em 0;
+    text-transform: uppercase;
+    position: fixed;
+    top: 0;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    &__logo{
+        margin: auto 5px auto 20px;
+        width: 70px;
+    }
+    &__line{
+        background-color: $color-papayawhip;
+        width: 250px;
+        height: 2px;
+        z-index: 2;
+        margin: auto -50px auto 0;
+        overflow-x: hidden;
+    }
+    &__btnMenu{
+        display: none;
+    }
+    &__menu{
+        height: auto;
+        width:70% ;
+        z-index: 1;
+        background-color: rgb(5, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+    }
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    padding: auto 15px;
+    margin-left: 2em;
+    &__item{
+        display: flex;
+        flex-direction: row;
+        margin: 0 15px;
+        padding: 1.5em 0;
+        justify-content: space-between;
+        &-number{
+            font-weight: bold;
+            padding-right: 10px;
+        }
+        border-bottom:3px solid transparent;
+        &:hover{
+            border-bottom:3px solid $color-papayawhip;
+            cursor: pointer;
+            color: $color-hover;
+        }
+    }
+}
+//mobile
+@media (max-width:599px) {
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+        z-index: 2;
+        background-color: rgb(5, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        &__logo{
+            margin: auto 0;
+            width: 50px;
+            padding: 6px;
+        }
+        &__line{
+            display: none;
+        }
+        &__btnMenu{
+            margin:auto 0;
+            display: block;
+            padding: 10px;
+            width: 50px;
+            color: $color-papayawhip;
+            z-index: 2;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        &__menu{
+            display: none;
+        }
+    }
+
+    .menu{
+        display: flex;
+        flex-direction:column;
+        justify-content: space-between;
+        overflow-y: hidden;
+        width: 50px;
+        height: 0;
+        padding:50px 0 0 0;
+        margin:0;
+        border-radius:0 0 0 15px;
+        background-color: rgb(5, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        &:hover{
+            height: auto;
+            width: 55%;
+        }
+        &__item{
+            display:flex;
+            flex-direction: row;
+            border-radius:0 0 0 15px;
+            padding: 10px 0 5px 10px;
+            margin: 0;
+            border-bottom:3px solid transparent;
+            overflow-y: hidden;
+            &-number{
+                font-weight: bold;
+                padding-right: 10px;
+            }
+            &-name{
+                width: 100%;
+                text-align: right;
+                margin-right: 15px;
+            }
+            &:hover{
+                border-left:0.2px solid $color-papayawhip;
+            }
+            
+        }
+    }
+
+    .header__btnMenu:hover +.menu{
+       height: auto;
+       display: flex;
+       width: 50%;
+    }
+
+}
+//tablet
+@media (min-width:600px) and (max-width:900px) {
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0.5em 0;
+        text-transform: uppercase;
+        position: fixed;
+        top: 0;
+        bottom: auto;
+        left: 0;
+        right: 0;
+        &__logo{
+            margin: auto 0 auto 10px;
+            width: 65px;
+        }
+        &__line{
+           display: none;
+        }
+        &__btnMenu{
+            display: none;
+        }
+        &__menu{
+            width:80% ;
+            margin-left: 1em;
+        }
+    }
+    
+    .menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: auto 5px;
+        margin: 0 4% auto 0;
+        width: auto;
+        &__item{
+            display: flex;
+            flex-direction: row;
+            margin: 0 10px;
+            padding: 1em 0;
+            justify-content: space-between;
+            &-number{
+                font-weight: bold;
+                padding-right: 10px;
+            }
+            border-bottom:3px solid transparent;
+            &:hover{
+                border-bottom:3px solid $color-papayawhip;
+                cursor: pointer;
+                color: $color-hover;
+            }
+        }
+    }
+}

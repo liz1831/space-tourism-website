@@ -1,0 +1,156 @@
+@use 'variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    border: border-box;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+body{
+    color: $color-papayawhip;
+    background-color: black;
+    overflow-y: none;
+}
+
+img{
+    width: 100%;
+}
+
+span{
+    font-weight: bold;
+}
+
+button{
+    border: none;
+    padding: 0;
+    margin: 0;
+    &:hover{
+        background-color:$color-hover;
+        cursor: pointer;
+    }
+    &:focus{
+        background-color:$color-hover;   
+    }
+}
+
+.screen{
+    font-size: 35px;
+}
+.content{
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 9% 10% 0;
+    align-items: center;
+    align-content: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.title1{
+    font-size: 6.3em;
+    margin: auto 0;
+    padding: 15px 0;
+    font-family: $font-cormorant;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.title2{
+    font-size: 2.5em;
+    margin: auto 0;
+    padding: 15px 0;
+    font-family: $font-cormorant;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+.subtitle2{
+    font-size: 2em;
+    text-align:left ;
+    padding: 15px 0;
+    font-family:$font-sansNarrow;
+}
+
+.subtitle1{
+    font-size: 35px;
+    font-family: $font-sansNarrow;
+    text-transform: uppercase;
+    padding: 25px 0;
+}
+
+.description{
+    font-size: 20px;
+}
+
+@media (min-width:230px) and (max-width:412px){
+    .content{
+        padding:2.5em 25px;
+        text-align: center;
+    }
+
+    .title1{
+        font-size: 4.2em;
+        margin: auto 0;
+        padding: 10px 0;
+    }
+    .title2{
+        font-size: 1.5em;
+        padding: 10px 0;
+        letter-spacing: 2px;
+    }
+    .subtitle2{
+        font-size: 1.80em;
+        padding: 10px 0;
+        text-align: center;
+    }
+    
+    .subtitle1{
+        font-size: 20px;
+        padding: 20px 0;
+    }
+
+    .description{
+        font-size: 18px;
+    }
+}
+
+@media (min-width:413px) and (max-width:850px){
+    .content{
+        padding:5em 50px;
+        text-align: center;
+    }
+
+    .title1{
+        font-size: 8.5em;
+        margin: auto 0;
+        padding: 10px 0;
+    }
+    .title2{
+        font-size: 1.90em;
+        padding: 10px 0;
+        letter-spacing: 2px;
+    }
+    .subtitle2{
+        font-size: 1.5em;
+        padding: 10px 0;
+        text-align: center;
+    }
+    
+    .subtitle1{
+        font-size: 30px;
+        padding: 20px 0;
+        text-align: center;
+    }
+}
+
+@media (max-height:412px){
+    .content{
+        padding-top:10em;
+        padding-bottom: 50px;
+    }
+}

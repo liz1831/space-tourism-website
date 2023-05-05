@@ -1,0 +1,119 @@
+@import '/src/styles.scss';
+
+.Crew{
+    @include bg-image("/assets/crew/background-crew-desktop.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__screen{
+        width: 100%;
+    }
+    &__data{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: 75%;
+        &-info{
+            margin: auto 0;
+            width: 60%;
+        }
+        &-image{
+            width: 350px;
+            margin: auto 0 -5px 0;
+            
+        }
+    }
+}
+
+.CrewControl{
+    margin-top: 3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 150px;
+    &__item{
+        border-radius: 100%;
+        padding:10px;
+        background-color: $color-papayawhip;
+    }
+}
+//mobile
+@media (max-width:375px) {
+    .Crew{
+        @include bg-image("/assets/crew/background-crew-mobile.jpg");
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        &__data{
+            display: flex;
+            flex-direction: column-reverse;
+            height: auto;
+            width: 100%;
+            &-info{
+                width: 100%;
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            &-image{
+                width: 300px;
+                margin: auto ;
+                height: auto;
+            }
+        }
+    }
+    
+    .CrewControl{
+        margin:20px auto;
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        &__item{
+            padding:7px;
+
+        }
+    }
+}
+//tablet
+@media (min-width: 376px) and (max-width:768px) {
+    .Crew{
+        @include bg-image("/assets/crew/background-crew-tablet.jpg");
+        display: flex;
+        flex-direction: column;
+    
+        &__data{
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            width: 100%;
+            margin: auto 0 0 0;
+            text-align: center;
+            justify-content: space-between;
+            &-info{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin: 50px 0;
+            }
+            &-image{
+                width: auto;
+                margin:50px auto 0 auto;
+                max-height: 700px;
+                overflow-y: hidden;
+                border: 1px solid red;
+            }
+        }
+    }
+    
+    .CrewControl{
+        margin:20px auto;
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        &__item{
+            padding:7px;
+
+        }
+    }
+}

@@ -1,0 +1,21 @@
+<div class="Crew content">
+    <h2 class="Crew__screen subtitle2">
+        <span class="screen">02</span>
+        Meet your crew
+    </h2>
+    <div class="Crew__data">
+        <div class="Crew__data-info">
+            <div>
+                <h3 class="subtitle1">{{ArrayCrew[getElement()].role}}</h3>
+                <h2 class="title2">{{ArrayCrew[getElement()].name}}</h2>
+                <p class="description">{{ArrayCrew[getElement()].bio}}</p>
+            </div>
+            <div class="CrewControl">
+                <button class="CrewControl__item" *ngFor="let crew of ArrayCrew" (click)="setElement(ArrayCrew.indexOf(crew))"></button>
+            </div>
+        </div>
+        <div class="Crew__data-image">
+            <img src={{ArrayCrew[getElement()].images.png}} alt="">
+        </div>
+    </div>
+</div>

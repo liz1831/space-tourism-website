@@ -1,0 +1,58 @@
+@import '/src/styles.scss';
+
+.Home{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;    
+    @include bg-image("/assets/home/background-home-desktop.jpg");
+    &__info{
+        width: 55%;
+    }
+    &__explore{
+        background: white;
+        border-radius: 100%; 
+        margin: auto 0 auto 30px;  
+        padding: 60px 55px;
+        color: black;
+        font-weight: bold;
+        border: 1px solid rebeccapurple;
+    }
+    
+    @media (max-width:360px){
+        display: flex;
+        flex-direction: column;
+        @include bg-image("/assets/home/background-home-mobile.jpg");
+        &__info{
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        &__explore{
+            background: white;
+            border-radius: 100%;
+            margin:10% auto 45% auto;  
+            padding: 50px;
+            color: black;
+            font-weight: bold;
+        }
+    }
+    @media (max-width:768px){
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include bg-image("/assets/home/background-home-tablet.jpg");
+        &__info{
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 50px auto;
+        }
+        &__explore{
+            background: white;
+            border-radius: 100%;
+            margin:10% auto 15% auto;  
+            padding: 80px;
+            color: black;
+            font-weight: bold;
+        }
+    }
+}

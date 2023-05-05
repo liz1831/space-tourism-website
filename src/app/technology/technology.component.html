@@ -1,0 +1,23 @@
+<div class="Technology content">
+    <h2 class="subtitle2">
+        <span class="screen">03</span>
+        Space launch 101
+    </h2>
+
+    <div class="Technology__element">
+        <div class="Technology__element--data">
+            <div class="Technology__element--data-options options">
+                <button class="options__item" *ngFor="let tech of ArrayTechnology" (click)="setElement(ArrayTechnology.indexOf(tech))">{{ArrayTechnology.indexOf(tech) + 1}}</button>
+            </div>
+            <div class="Technology__element--data-info">
+                <h4 class="subtitle3">The Technology...</h4>
+                <h2 class="title2">{{ArrayTechnology[getElement()].name}}</h2>
+                <p class="description">{{ArrayTechnology[getElement()].description}}</p>
+            </div>
+        </div>
+        <div class="Technology__element-Image">
+            <img class="Technology__element-Image-portrait" src={{ArrayTechnology[getElement()].images.portrait}} alt="">
+            <img class="Technology__element-Image-landscape" src={{ArrayTechnology[getElement()].images.landscape}} alt="">
+        </div>
+    </div>
+</div>
